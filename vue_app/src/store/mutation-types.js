@@ -1,0 +1,10 @@
+export const robotMsgMutation = "robotMsgMutation";
+export const newFriendMutation = "newFriendMutation";
+export const msgListMutation = "msgListMutation";
+export const firstLoadMutation = "firstLoadMutation";
+export const friendReqTipsMutation= "friendReqTipsMutation";
+export const updateListMutation = "updateListMutation";
+export const resetUnredMutation = "resetUnredMutation";
+export const someOneInfoMutation = "someOneInfoMutation";
+export const groupMemberMutation = "groupMemberMutation";
+export const groupInfoMutation = "groupInfoMutation";

@@ -1,0 +1,56 @@
+.wrapper {
+  // height: 100vh;
+  padding-top: 0.6rem;
+  z-index: 1;
+
+  ul {
+    width: 100%;
+    padding-bottom: 1.6rem;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  .input-msg {
+    height: 0.66rem;
+    position: fixed;
+    bottom: 0rem;
+    display: flex;
+    width: 100%;
+    z-index: 999;
+    textarea {
+      width: 80%;
+      padding: 0.05rem 0.1rem;
+      border-radius: 0.02rem;
+      outline: none;
+      resize: none;
+      border: none;
+      overflow-y: hidden;
+      font: 0.24rem 'Microsoft Yahei';
+    }
+
+    p.btn {
+      font-size:0.22rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      width: 20%;
+      background: #ccc;
+      color: white;
+      border-radius: 0.02rem;
+      cursor: not-allowed;
+      font-family: 'Microsoft Yahei';
+
+      &.enable {
+        background: #1E90FF;
+        cursor: pointer;
+      }
+    }
+  }
+}
