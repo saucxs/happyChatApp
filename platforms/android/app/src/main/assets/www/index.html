@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="initial-scale=1,width=device-width,viewport-fit=cover"><title>happyChat(一个拥有群聊天，私人聊天，机器人聊天等功能的应用）</title><link href=static/css/app.af4aa7c52c1c2472344659de94d264af.css rel=stylesheet></head><body><div id=app></div><div class=content-busuanzi style="display: none"><span class=after-content>本站总访问量<span id=busuanzi_value_site_pv></span>次</span> <span class=after-content>本站访客数<span id=busuanzi_value_site_uv></span>人次</span></div><script src=http://at.alicdn.com/t/font_1083780_zb54wokfjud.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js></script><script async src=http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><script>// const socketWeb = io('http://localhost:3000');
+      const socketWeb = io('http://chat.chengxinsong.cn');
+      const userInfo = JSON.parse(localStorage.getItem("HappyChatUserInfo"))
+      if (userInfo) {
+        socketWeb.emit('update', userInfo.user_id);
+      }</script><script>/*tongji*/
+      (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();</script><script type=text/javascript src=cordova.js></script><script type=text/javascript src=static/js/manifest.37a2ecbb1d1b7e6c9ada.js></script><script type=text/javascript src=static/js/vendor.a01c62e2a9a919bfb338.js></script><script type=text/javascript src=static/js/app.daf1444c703e39da55fd.js></script></body></html>
