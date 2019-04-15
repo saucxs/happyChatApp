@@ -200,7 +200,10 @@ export default {
 			this.messageBox.title = '修改我的信息';
 		},
 		//屏蔽此人
-		shieldIt() {},
+		shieldIt() {
+
+
+    },
 		//删除好友
 		deFriended() {
 			this.messageBox.messageBoxEvent = 'delFriend'

@@ -2,6 +2,7 @@
 // 引入vue和axios
 import Vue from "vue";
 import axios from "axios";
+import router from '../router/index'
 
 // axios.defaults.baseURL = 'http://localhost:3000';
 
@@ -35,10 +36,25 @@ service.interceptors.response.use(
       return data;
     }
   },
-  error => ({
-    code: -1,
-    msg: "网络异常"
-  })
+  error => {
+    if(error.response) {
+      switch (error.response.status){
+        case 401:
+          /*返回401，清空token信息，关闭socketio，并跳转到登陆页*/
+          let userInfo = JSON.parse(localStorage.getItem("HappyChatUserInfo"));
+          socketWeb.emit('logout', userInfo.user_id)
+          localStorage.removeItem("HappyChatUserToken");
+          localStorage.removeItem("HappyChatUserInfo");
+          setTimeout(function() {
+            router.push({
+              path: "/login",
+              query: {redirect: router.currentRoute.fullPath}
+            });
+          }, 500);
+      }
+    }
+    return Promise.reject(error.response)   // 返回接口返回的错误信息
+  }
 );
 
 export default {
