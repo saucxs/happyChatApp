@@ -29,7 +29,7 @@ export const chatRobot = ({commit},params) => {
       }
     }
   }).catch(err => {
-      console.log(err);
+    console.log(err);
   });
 };
 
@@ -112,6 +112,7 @@ export const getAlreadyGroups = ({commit},params) => {
     return res;
   }).catch(err => {
     console.log(err);
+    return err;
   });
 };
 
