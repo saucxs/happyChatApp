@@ -10,7 +10,7 @@
 
 （1）PC端和无线端线上地址：http://chat.chengxinsong.cn
 
-（2）下载安卓APP地址：暂时不提供，还有有点bug
+（2）下载安卓APP地址：暂时不提供，在优化和安全测试中
 
 ## 1、功能
 + 版本v 1.0.0
@@ -34,6 +34,10 @@
 ## 2、PC端和无线端线上地址
 
 http://chat.chengxinsong.cn
+
+## 3、安卓下载地址
+
+在优化和安全测试中，暂时不提供
     
 ## 3、源码使用
 ```js
@@ -73,7 +77,9 @@ cordova run android
 
 ## 5、前后端源码地址
 
-前端代码：https://github.com/saucxs/happy-chat-web
+无线端和PC端前端代码：https://github.com/saucxs/happy-chat-web
+
+安卓APP代码：https://github.com/saucxs/happyChatApp
 
 后端代码：https://github.com/saucxs/happy-chat-node
 
